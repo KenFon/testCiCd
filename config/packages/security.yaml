@@ -41,4 +41,4 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/docs, roles: IS_AUTHENTICATED_ANONYMOUSLY } # Allows accessing the Swagger UI
         - { path: ^/api/authentication_token, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/presences, roles: IS_AUTHENTICATED_ANONYMOUSLY }

@@ -1,6 +1,0 @@
-App\Entity\User:
-    promotion_{1..20}:
-        email: <sentence(2)>
-        role: /api/role/0
-        password: "Pa$$w0rd"
-        end: <dateTime()>

@@ -49,18 +49,20 @@ class Promotion
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="promotions")
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      * @ApiSubResource(maxDepth=1)
      */
     private $users;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\ExceptionDate", mappedBy="promotion", orphanRemoval=true)
-     * 
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true) 
      */
     private $exceptions;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Regroupement", inversedBy="promotions")
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     private $regroupements;
 

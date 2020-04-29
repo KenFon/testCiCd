@@ -40,7 +40,7 @@ class ExceptionDate
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Promotion", inversedBy="exceptions")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=false)
      */
     private $promotion;
 

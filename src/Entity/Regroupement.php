@@ -27,11 +27,13 @@ class Regroupement
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="regroupements")
+     * @ORM\JoinColumn(referencedColumnName="id")
      */
     private $users;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Promotion", mappedBy="regroupements")
+     * @ORM\JoinColumn(referencedColumnName="id")
      */
     private $promotions;
 

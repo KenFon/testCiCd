@@ -30,7 +30,7 @@ class Presence
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="presences")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=false)
      */
     private $user;
 

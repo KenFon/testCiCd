@@ -57,17 +57,20 @@ class User implements UserInterface
     private $lastname;
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Promotion", inversedBy="users")
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      * @ApiSubResource(maxDepth=1)
      */
     private $promotions;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Regroupement", inversedBy="users")
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     private $regroupements;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      * @ApiSubResource(maxDepth=1)
      */
     private $presences;
